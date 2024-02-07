@@ -59,7 +59,7 @@ The conditional homeskedasticity assumption implies that the variance of the res
 
 From the graph, we can see that the variance is lower for both low and high values of expropriation risk. However, this may simply be a data issue. There are not a lot of observations with low or high values of expropriation risk. 
 
-Alternatively, one could use White's test to check whether homoskedasticity is violated in the sample. In Stata, this test can be implemented using the "estat imtest, White" command. However, given the small number of observations at hand, the test will lack power. On the given sample, the maintained hypothesis of homeskedastic errors cannot be rejected.
+Alternatively, one could use White's test to check whether homoskedasticity is violated in the sample. In Stata, this test can be implemented using the "estat imtest, white" command. However, given the small number of observations at hand, the test will lack power. On the given sample, the maintained hypothesis of homeskedastic errors cannot be rejected.
 
 Nevertheless, it is generally advised to allow for heteroskedastic errors using the robust option of the regress command. Even if the error terms are effectively homoskedastic, heteroskedasticity-robust errors are valid. Hence the name of the robust command: The estimated standard errors are robust to potential violations of the conditional homoskedasticity assumption.
 */
@@ -103,12 +103,14 @@ Interpretation: Holding all other variables fixed, a one unit increase in the ri
 *-------------------------------------------------------------------------------
 
 /*
-Having stored the previous regressions using the "estimates store name" command, we can now simply retrieve their outputs using the following command -- i.e., without having to perform the regressions again.
+Having stored the previous regressions using the "estimates store name" command, we can now simply retrieve their outputs using the "estimates replay names" command -- i.e., without having to perform the regressions again. Note that one can simply use "_all" or "*" instead of listing all names of the stored regressions.
 
 All outputs are shown again in the output window.
 */
 
 estimates replay reg1 reg2 reg3
+// estimates replay _all
+// estimates replay *
 
 /*
 [(a):]
