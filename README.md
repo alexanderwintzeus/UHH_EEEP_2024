@@ -10,4 +10,4 @@ The folder **Materials** contains a subfolder for each of the four tutorials. Ea
 After each tutorial, I will upload the solutions in the relevant subfolder (.do file).
 
 ### Update 08/02/2024: 
-The folder **Materials** now includes a subfolder **Lecture7_DiD** containing a pdf presentation for the final lecture on Difference-in-Differences.
+The folder **Materials** now includes an additional subfolder **Lecture7_DiD** containing a pdf presentation for the final lecture on Difference-in-Differences.
